@@ -1,0 +1,70 @@
+def  a_dict (string_1,string_2):
+    d = {}
+    word1 = ""
+    word2 = ""
+    
+    
+    
+    for i in string_1 :
+        if i == " ":
+            if word1 in d:
+                d[word1] += 1
+            else:
+                d[word1] = 1
+            word1 = ''
+        else :
+            word1 += i
+    if word1 in d:
+        d[word1] += 1
+    else:
+        d[word1] = 1
+        
+    print(d)
+        
+
+            
+    for j in string_2:
+        if j == " ":
+            if word2 in d:
+                print(True)
+                if d[word2] >= 1:
+                    d[word2] -= 1
+                    
+                
+                else :
+                    return False
+                
+            else:
+                return False
+
+            word2 = ''
+        
+            
+        else :
+            word2 += j
+    if word2 in d:
+        if d[word2] >= 1:
+            d[word2] -= 1
+        else :
+            return False
+        
+                
+    return True
+            
+
+            
+        
+print(a_dict('hey','there'))
+
+    
+
+            
+                
+        
+            
+            
+    
+    
+        
+            
+            
